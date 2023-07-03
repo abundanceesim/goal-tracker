@@ -1,0 +1,30 @@
+{
+  "name": "goal-tracker",
+  "version": "1.0.0",
+  "description": "Goal setter app for purpose of learning to create MERN applications",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abundanceesim/goal-tracker.git"
+  },
+  "author": "Abundance Esim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abundanceesim/goal-tracker/issues"
+  },
+  "homepage": "https://github.com/abundanceesim/goal-tracker#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^7.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
