@@ -14,6 +14,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
 app.use('/api/goals', require('./routes/goalRoutes'))
+app.use("/api/users", require("./routes/userRoutes"));
 
 // overriding the default error handler to use the one specified in errorMiddleware
 // just for the purpose of a more readable error message format.
