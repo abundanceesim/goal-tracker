@@ -77,12 +77,16 @@ const loginUser = asyncHandler( async (req, res) => {
 // @access  Private
 const getMe = asyncHandler( async (req, res) => {
     // retrieve details for whatever user is authenticated
-    const {_id, name, email} = await User.findById(req.user.id)
-    res.status(200).json({
-        id: _id,
-        name,
-        email
-    });
+    res.status(200).json(req.user)
+
+    // Alternative way, but unnecessary since user's being returned 
+    // from middleware already:
+    // const {_id, name, email} = await User.findById(req.user.id)
+    // res.status(200).json({
+    //     id: _id,
+    //     name,
+    //     email
+    // });
 })
 
 const generateToken = (id) => {
