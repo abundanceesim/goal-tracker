@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { createGoal } from "../features/goals/goalSlice";
+import { createGoal, getGoals } from "../features/goals/goalSlice";
 
 function GoalForm() {
   const [text, setText] = useState("");
@@ -11,6 +11,7 @@ function GoalForm() {
     e.preventDefault();
 
     dispatch(createGoal({ text }));
+    dispatch(getGoals())
     setText("");
   };
 

@@ -8,7 +8,7 @@ function GoalItem({ goal }) {
   return (
     <div className="goal">
       <div>{created}</div>
-      <h2>{goal.text}</h2>
+      <h3>{goal.text}</h3>
       <button onClick={() => dispatch(deleteGoal(goal._id))} className="close">
         X
       </button>
